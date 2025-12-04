@@ -1,3 +1,7 @@
+
+
+Project overview: a short summary explaining what this project is all about
+
 This program is delivery mechandise program
 
 processing.py is main file for working
@@ -17,3 +21,5 @@ in main code
 we create 2 Customer
 1 driver
 and create 2 order from each cutomers and add it to collec list
+
+
