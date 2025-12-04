@@ -23,3 +23,41 @@ class Driver(Person):
     def deliver(self, order):
         return f'{self.name} is delivering {order.item} to {order.customer} using {self.vehicle}'
     
+
+
+# main
+collec = []
+Alice = Customer('Alice')
+Bob = Customer('Bob')
+driver = Driver('David', 'motorcycle')
+
+
+print(f'Hi, I\'m {Alice.name}.')
+print(f'Hi, I\'m {Bob.name}.')
+print(f'Hi, I\'m {driver.name}.')
+print()
+
+laptop = Alice.place_order('Laptop')
+headphone = Bob.place_order('Headphones')
+collec.append(laptop)
+collec.append(headphone)
+
+for item in collec:
+    print('Order Summary:')
+    print(f'Item: {item.item}')
+    print(f'Customer: {item.customer}')
+    print(f'Status: {item.status}')
+    print(f'Driver: {driver.name}')
+    print()
+
+
+print(driver.deliver(laptop))
+print(driver.deliver(headphone))
+print()
+
+print('Final Status')
+for item in collec:
+    print(f'Order for {item.item} → delivered')
+    
+
+print()
